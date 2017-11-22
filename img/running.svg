@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="Green_Ball"
+   data-name="Green Ball"
+   viewBox="0 0 16.56 16.56"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="running.svg">
+  <metadata
+     id="metadata3389">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1547"
+     inkscape:window-height="876"
+     id="namedview3387"
+     showgrid="false"
+     inkscape:zoom="43.115943"
+     inkscape:cx="8.2799997"
+     inkscape:cy="8.2799997"
+     inkscape:window-x="53"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Green_Ball" />
+  <defs
+     id="defs3379">
+    <style
+       id="style3381">.cls-1{fill:#090;}</style>
+  </defs>
+  <title
+     id="title3383">icon-status_online_01</title>
+  <circle
+     class="cls-1"
+     cx="8.28"
+     cy="8.28"
+     r="8.28"
+     id="circle3385"
+     style="fill:#00ff00" />
+</svg>
