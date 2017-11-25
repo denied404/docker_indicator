@@ -18,8 +18,8 @@ IMAGE_PATH = os.path.join(
 
 def build_menu(client):
     menu = gtk.Menu()
-    for c in containers_list(client):
-        menu.append(c)
+    for c in client.containers.list(all=True):
+        menu.append(render_container(c))
     item_quit = gtk.MenuItem('Quit')
     item_quit.connect('activate', quit)
     menu.append(item_quit)
@@ -27,13 +27,23 @@ def build_menu(client):
     return menu
 
 
-def containers_list(client):
-    return list(
-            map(
-                lambda c: render_container(c),
-                client.containers.list(all=True)
-                )
-            )
+def container_menu(container):
+    menu = gtk.Menu()
+    item_start = gtk.MenuItem('Start')
+    item_start.connect('activate', container_action, container, 'start')
+    item_stop = gtk.MenuItem('Stop')
+    item_stop.connect('activate', container_action, container, 'stop')
+    menu.append(item_start)
+    menu.append(item_stop)
+    menu.show_all()
+    return menu
+
+
+def container_action(_, container, action):
+    if action == 'start':
+        container.start()
+    elif action == 'stop':
+        container.stop()
 
 
 def render_container(container):
@@ -46,6 +56,7 @@ def render_container(container):
     menu_entry = gtk.ImageMenuItem(container.name)
     menu_entry.set_always_show_image(True)
     menu_entry.set_image(img)
+    menu_entry.set_submenu(container_menu(container))
     return menu_entry
 
 
