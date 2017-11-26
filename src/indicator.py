@@ -151,7 +151,3 @@ class DockerIndicator:
 
     def quit(self, _):
         gtk.main_quit()
-
-
-if __name__ == "__main__":
-    docker_indicator = DockerIndicator()
