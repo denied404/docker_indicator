@@ -1,0 +1,36 @@
+service_name: legal-message-bus
+image: avvo-docker-local.artifactory.internetbrands.com/avvo/legal-message-bus
+facing: backend
+env_on: start
+
+databases:
+  - db: mh
+    as: MH_DB
+    grants: readwrite
+    server: postgres
+    schema:
+      - lmb
+  - db: universal_db
+    as: UNIVERSAL_DB
+    grants: readwrite
+    server: postgres
+    schema:
+      - legal
+
+routing:
+  lb_port: 8890
+  path: /
+  port: 8181
+  protocol: http
+  subdomain: legal-services
+
+health_check:
+  path: /
+  port: 8181
+
+memory_limit: 256Mi
+memory_per: WORKERS
+memory_request: 128Mi
+cpu_limit: 1000m
+cpu_per: WORKERS
+cpu_request: 10m
